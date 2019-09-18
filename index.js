@@ -1,21 +1,20 @@
-/* @flow */
 import {
   Platform,
   NativeModules,
   Share,
 } from 'react-native';
 
-const { RNShareFile } = NativeModules;
+const { SharePdf } = NativeModules;
 
 export default {
-  sharePDF: async (base64Data: string, documentFileName: string): Promise<Error | void> => {
+  sharePDF: async (base64Data, documentFileName) => {
     try {
       await Platform.select({
         ios: async () => {
           await Share.share({ url: `data:application/pdf;base64,${base64Data}` });
         },
         android: async () => {
-          await RNShareFile.share(base64Data, documentFileName);
+          await SharePdf.share(base64Data, documentFileName);
         },
       })();
       return undefined;

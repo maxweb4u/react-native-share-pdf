@@ -1,13 +1,3 @@
-# NPM
-react-native-*.tgz
-package/
-
-# jest
-coverage
-
-# generated
-lib/
-
 # OSX
 #
 .DS_Store
@@ -17,33 +7,16 @@ lib/
 node_modules/
 npm-debug.log
 yarn-error.log
-react-native-share-pdf-*.tgz
 
-# Xcode
+# Android/IntelliJ
 #
 build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
-*.xccheckout
-*.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
-project.xcworkspace
-
-
-# Android
-#
-build/
-.gradle
 .idea
+.gradle
 local.properties
 *.iml
+
+# BUCK
+buck-out/
+\.buckd/
+*.keystore
